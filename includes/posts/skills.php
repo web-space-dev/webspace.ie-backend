@@ -31,6 +31,8 @@ function custom_skill_post_type()
         'show_in_admin_bar' => true,
         'menu_position' => 5,
         'show_in_graphql' => true,
+        'graphql_single_name' => 'skill',
+        'graphql_plural_name' => 'skills',
         'menu_icon'           => 'dashicons-shortcode', // Change this to the Dashicon you want
         'can_export' => true,
         'has_archive' => true,

@@ -32,6 +32,8 @@ function custom_project_post_type()
         'show_in_admin_bar' => true,
         'menu_position' => 5,
         'show_in_graphql' => true,
+        'graphql_single_name' => 'project',
+        'graphql_plural_name' => 'projects',
         'menu_icon'           => 'dashicons-edit', // Change this to the Dashicon you want
         'can_export' => true,
         'has_archive' => true,

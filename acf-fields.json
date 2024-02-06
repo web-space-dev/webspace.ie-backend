@@ -1,6 +1,6 @@
 [
     {
-        "key": "group_6586ec51e309d",
+        "key": "home-fields",
         "title": "Home Fields",
         "fields": [
             {
@@ -35,12 +35,88 @@
                     "class": "",
                     "id": ""
                 },
+                "show_in_graphql": 1,
+                "graphql_description": "",
+                "graphql_field_name": "whatWeDo",
+                "graphql_non_null": 0,
                 "collapsed": "",
                 "min": 0,
                 "max": 0,
-                "layout": "row",
+                "layout": "table",
                 "button_label": "",
-                "sub_fields": []
+                "sub_fields": [
+                    {
+                        "key": "field_65c263b3a6a4b",
+                        "label": "Title",
+                        "name": "title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "show_in_graphql": 1,
+                        "graphql_description": "",
+                        "graphql_field_name": "title",
+                        "graphql_non_null": 0,
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_65c263b7a6a4c",
+                        "label": "Pills",
+                        "name": "pills",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "show_in_graphql": 1,
+                        "graphql_description": "",
+                        "graphql_field_name": "pills",
+                        "graphql_non_null": 0,
+                        "collapsed": "",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "table",
+                        "button_label": "",
+                        "sub_fields": [
+                            {
+                                "key": "field_65c263c7a6a4d",
+                                "label": "Pill Text",
+                                "name": "pill_text",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "show_in_graphql": 1,
+                                "graphql_description": "",
+                                "graphql_field_name": "pillText",
+                                "graphql_non_null": 0,
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "key": "field_6586ed84947a4",
@@ -98,7 +174,54 @@
                 "max": 0,
                 "layout": "table",
                 "button_label": "",
-                "sub_fields": []
+                "sub_fields": [
+                    {
+                        "key": "field_65c26517a9103",
+                        "label": "Title",
+                        "name": "title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "show_in_graphql": 1,
+                        "graphql_description": "",
+                        "graphql_field_name": "title",
+                        "graphql_non_null": 0,
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_65c26521a9104",
+                        "label": "Paragraph",
+                        "name": "paragraph",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "show_in_graphql": 1,
+                        "graphql_description": "",
+                        "graphql_field_name": "paragraph",
+                        "graphql_non_null": 0,
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "new_lines": ""
+                    }
+                ]
             }
         ],
         "location": [
@@ -131,7 +254,11 @@
             "send-trackbacks"
         ],
         "active": true,
-        "description": ""
+        "description": "",
+        "show_in_graphql": 1,
+        "graphql_field_name": "homeFields",
+        "map_graphql_types_from_location_rules": 0,
+        "graphql_types": ""
     },
     {
         "key": "group_65c252d362028",
