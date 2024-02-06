@@ -14,16 +14,18 @@ To get started with the WebSpace WordPress theme, follow these steps:
 
 ## Database Syncing
 
-To export your current database to add to version control, open a site shell in Local, and run the following command:
-
-```bash
-wp db export --add-drop-table database.sql
-```
-
 To import the database from version control, open a site shell in Local, and run the following command:
 
 ```bash
 wp db import database.sql
+```
+
+To export your current database to add to version control, open a site shell in Local, and run the following command:
+
+> Note: This will overwrite the `database.sql` file in the root of the theme, maybe good to check before commiting this up
+
+```bash
+wp db export --add-drop-table database.sql
 ```
 
 ## License
