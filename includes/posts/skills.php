@@ -51,6 +51,9 @@ function create_skill_taxonomy()
         'label' => __('Categories', 'text_domain'),
         'rewrite' => array('slug' => 'skill-category'),
         'hierarchical' => true,
+        'show_in_graphql' => true, // Make taxonomy available in GraphQL
+        'graphql_single_name' => 'skillCategory', // Single name for GraphQL
+        'graphql_plural_name' => 'skillCategories', // Plural name for GraphQL
     );
     register_taxonomy('skill_category', 'skill', $args);
 }
