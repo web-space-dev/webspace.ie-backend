@@ -23,7 +23,6 @@ function custom_skill_post_type()
         'description' => __('Skills Description', 'text_domain'),
         'labels' => $labels,
         'supports' => array('title', 'thumbnail'),
-        'taxonomies' => array('category'),
         'hierarchical' => false,
         'public' => true,
         'show_ui' => true,
@@ -42,4 +41,17 @@ function custom_skill_post_type()
 
     register_post_type('skill', $args);
 }
+
+// Register custom taxonomy for Skills
+function create_skill_taxonomy()
+{
+    $args = array(
+        'label' => __('Categories', 'text_domain'),
+        'rewrite' => array('slug' => 'skill-category'),
+        'hierarchical' => true,
+    );
+    register_taxonomy('skill_category', 'skill', $args);
+}
+
 add_action('init', 'custom_skill_post_type', 0);
+add_action('init', 'create_skill_taxonomy');
