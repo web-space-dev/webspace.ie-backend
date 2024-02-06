@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/includes/posts/skills.php');
+require_once(__DIR__ . '/includes/acf/home_fields.php');
 // require_once(__DIR__ . '/includes/email/email.php');
 
 if (!defined('_S_VERSION')) {
