@@ -52,6 +52,9 @@ function create_project_taxonomy()
         'label' => __('Categories', 'text_domain'),
         'rewrite' => array('slug' => 'project-category'),
         'hierarchical' => true,
+        'show_in_graphql' => true, // Make taxonomy available in GraphQL
+        'graphql_single_name' => 'projectCategory', // Single name for GraphQL
+        'graphql_plural_name' => 'projectCategories', // Plural name for GraphQL
     );
     register_taxonomy('project_category', 'project', $args);
 }
