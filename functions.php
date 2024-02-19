@@ -3,6 +3,7 @@
 require_once(__DIR__ . '/includes/posts/skills.php');
 require_once(__DIR__ . '/includes/posts/projects.php');
 require_once(__DIR__ . '/includes/acf/generate_fields.php');
+require_once(__DIR__ . '/includes/images/placeholder.php');
 
 if (!defined('_S_VERSION')) {
     define('_S_VERSION', '1.0.0');
