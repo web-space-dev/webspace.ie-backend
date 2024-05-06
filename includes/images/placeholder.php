@@ -19,6 +19,8 @@ add_action('graphql_register_types', function () {
             $image = new Imagick($file_local_abs_path);
 
             $image->resizeImage(128, 128, Imagick::FILTER_CATROM, 1);
+            // $image->resizeImage(64, 64, Imagick::FILTER_CATROM, 1);
+            $image->setImageFormat('webp');
             $image->blurImage(100, 20);
             $image->stripImage();
 
