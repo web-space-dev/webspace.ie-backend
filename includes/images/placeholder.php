@@ -7,7 +7,7 @@ use WPGraphQL\AppContext;
 add_action('graphql_register_types', function () {
 
     register_graphql_field('MediaItem', 'placeholderDataURI', [
-        'description' => __('Encoded base64 placeholder', 'default'),
+        'description' => __('Encoded base64 placeholder', 'webspace-theme'),
         'type' => 'String',
         'resolve' => function (\WPGraphQL\Model\Post $source, $args, AppContext $context, ResolveInfo $info) {
             $file_local_abs_path = get_attached_file($source->databaseId);
