@@ -24,6 +24,4 @@ add_action('graphql_register_types', function () {
             return new \WPGraphQL\Model\Post($page);
         },
     ]);
-
-    // Your existing code...
 });
