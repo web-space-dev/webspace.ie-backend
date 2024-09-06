@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+body{
+
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+strong{
+
+    font-weight: 700;
+
+}
+
+.login{
+
+    background-image: url('../images/wp-background.jpg');
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+.login form{
+
+    background: rgba(255,255,255,1);
+
+    border-radius: 0;
+
+    max-width: 330px;
+
+    margin: 20px auto 0;
+
+    box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+
+}
+
+#login{
+
+    max-width: 440px;
+
+    width: 100%;
+
+}
+
+.login #login_error, .login .message, .login .success{
+
+    max-width: 330px;
+
+    margin: 0 auto 20px;
+
+}
+
+.login label {
+
+    color: #222;
+
+}
+
+.login #backtoblog a, .login #nav a{
+
+    color: #fff;
+
+}

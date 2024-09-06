@@ -23,6 +23,7 @@ if (!function_exists('webspace_setup')) {
     {
         // registerTypes();
         // registerTaxonomies();
+        require_once(get_stylesheet_directory() . '/includes/admin.php');
     }
 }
 
