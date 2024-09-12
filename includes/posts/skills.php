@@ -1,5 +1,55 @@
 <?php
 
+// Add custom columns to the Skills list page
+function set_custom_edit_skill_columns($columns)
+{
+    $columns['skill_category'] = __('Skill Category', 'text_domain');
+    return $columns;
+}
+add_filter('manage_skill_posts_columns', 'set_custom_edit_skill_columns');
+
+// Make the custom column sortable
+function custom_skill_sortable_columns($columns)
+{
+    $columns['skill_category'] = 'skill_category';
+    return $columns;
+}
+add_filter('manage_edit-skill_sortable_columns', 'custom_skill_sortable_columns');
+
+
+// Add sorting functionality for the custom column
+function custom_skill_orderby($query)
+{
+    if (!is_admin()) {
+        return;
+    }
+
+    $orderby = $query->get('orderby');
+    if ('skill_category' == $orderby) {
+        $query->set('meta_key', 'skill_category');
+        $query->set('orderby', 'meta_value');
+    }
+}
+add_action('pre_get_posts', 'custom_skill_orderby');
+
+// Populate the custom column with the Skills category
+function custom_skill_column($column, $post_id)
+{
+    switch ($column) {
+        case 'skill_category':
+            $terms = get_the_terms($post_id, 'skill_category');
+            if (!empty($terms)) {
+                foreach ($terms as $term) {
+                    echo esc_html($term->name) . ' ';
+                }
+            } else {
+                _e('No Skill Category', 'text_domain');
+            }
+            break;
+    }
+}
+add_action('manage_skill_posts_custom_column', 'custom_skill_column', 10, 2);
+
 // Register Custom Post Type
 function custom_skill_post_type()
 {
