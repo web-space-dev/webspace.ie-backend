@@ -7,7 +7,7 @@ require_once(__DIR__ . '/includes/images/placeholder.php');
 
 
 if (!defined('_S_VERSION')) {
-    define('_S_VERSION', '1.0.0');
+    define('_S_VERSION', '1.0.1');
 }
 
 if (!function_exists('webspace_setup')) {
